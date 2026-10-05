@@ -1,0 +1,158 @@
+{
+  "resources": {
+    "python": {
+      "courses": [
+        {"title": "Python for Everybody Specialization", "provider": "Coursera (Univ of Michigan)", "level": "Beginner to Intermediate", "type": "Course", "duration": "4 weeks"},
+        {"title": "Advanced Python: Design Patterns & Idioms", "provider": "Real Python", "level": "Advanced", "type": "Course", "duration": "3 weeks"}
+      ],
+      "projects": [
+        "Build a CLI tool that automates data ingestion and transformation with robust logging and unit testing.",
+        "Implement a multithreaded web scraper with rate-limiting and asynchronous requests using aiohttp."
+      ],
+      "practice": "Solve 30 intermediate algorithmic challenges focusing on list comprehensions, generators, and OOP design."
+    },
+    "machine_learning": {
+      "courses": [
+        {"title": "Machine Learning Specialization by Andrew Ng", "provider": "DeepLearning.AI / Coursera", "level": "Intermediate", "type": "Specialization", "duration": "8 weeks"},
+        {"title": "Applied Machine Learning with Scikit-Learn", "provider": "Fast.ai", "level": "Intermediate", "type": "Course", "duration": "5 weeks"}
+      ],
+      "projects": [
+        "End-to-End Customer Churn Prediction system with feature engineering, model tuning, and SHAP explainability.",
+        "Credit Risk Default Classifier with automated hyperparameter optimization and cross-validation."
+      ],
+      "practice": "Participate in Kaggle competitions or build pipelines with K-Fold CV, ROC-AUC evaluation, and feature importance analysis."
+    },
+    "deep_learning": {
+      "courses": [
+        {"title": "Deep Learning Specialization", "provider": "DeepLearning.AI", "level": "Intermediate to Advanced", "type": "Specialization", "duration": "6 weeks"},
+        {"title": "Practical Deep Learning for Coders", "provider": "Fast.ai", "level": "Intermediate", "type": "Course", "duration": "7 weeks"}
+      ],
+      "projects": [
+        "Convolutional Neural Network for medical imaging diagnostic classification with transfer learning.",
+        "Bidirectional LSTM or Transformer for stock sentiment and financial news trend analysis."
+      ],
+      "practice": "Implement custom loss functions, backpropagation routines, and gradient clipping in PyTorch."
+    },
+    "pytorch": {
+      "courses": [
+        {"title": "PyTorch for Deep Learning in 2024", "provider": "Daniel Bourke / ZeroToMastery", "level": "Intermediate", "type": "Course", "duration": "6 weeks"},
+        {"title": "Deep Neural Networks with PyTorch", "provider": "IBM / Coursera", "level": "Intermediate", "type": "Course", "duration": "4 weeks"}
+      ],
+      "projects": [
+        "Fine-tune a Vision Transformer (ViT) on a custom industrial defect dataset.",
+        "Build a multi-modal embeddings classifier using PyTorch Lightning."
+      ],
+      "practice": "Master Tensor operations, PyTorch DataLoader pipelines, torch.autograd, and GPU acceleration."
+    },
+    "scikit_learn": {
+      "courses": [
+        {"title": "Machine Learning in Python with Scikit-Learn", "provider": "INRIA MOOC", "level": "Beginner to Advanced", "type": "Course", "duration": "4 weeks"}
+      ],
+      "projects": [
+        "Build a reusable scikit-learn Pipeline incorporating ColumnTransformer, custom imputers, and estimators."
+      ],
+      "practice": "Practice model tuning using RandomizedSearchCV and GridSearchCV with custom scoring metrics."
+    },
+    "docker": {
+      "courses": [
+        {"title": "Docker for Developers & DevOps", "provider": "Udemy / KodeKloud", "level": "Beginner to Intermediate", "type": "Course", "duration": "3 weeks"},
+        {"title": "Containerizing ML Applications", "provider": "freeCodeCamp", "level": "Intermediate", "type": "Tutorial", "duration": "1 week"}
+      ],
+      "projects": [
+        "Create a multi-stage Dockerfile packaging a machine learning inference service with minimal image size.",
+        "Set up a multi-container environment with Docker Compose linking FastAPI, Redis, and PostgreSQL."
+      ],
+      "practice": "Build, tag, inspect layers, mount volumes, and optimize container memory limits."
+    },
+    "fastapi": {
+      "courses": [
+        {"title": "FastAPI - Modern Python Web APIs", "provider": "TestDriven.io", "level": "Intermediate", "type": "Course", "duration": "2 weeks"},
+        {"title": "High Performance Microservices with FastAPI", "provider": "Udemy", "level": "Intermediate", "type": "Course", "duration": "3 weeks"}
+      ],
+      "projects": [
+        "Production-ready ML model serving API with request validation (Pydantic), background tasks, and Swagger docs.",
+        "Async authentication and rate-limited REST API microservice with JWT."
+      ],
+      "practice": "Build asynchronous endpoints with dependency injection and custom middleware."
+    },
+    "mlops": {
+      "courses": [
+        {"title": "Machine Learning Engineering for Production (MLOps)", "provider": "DeepLearning.AI", "level": "Advanced", "type": "Specialization", "duration": "8 weeks"},
+        {"title": "Made With ML: Production ML Course", "provider": "Goku Mohandas", "level": "Advanced", "type": "Course", "duration": "4 weeks"}
+      ],
+      "projects": [
+        "Deploy an automated MLOps pipeline using MLflow for experiment tracking and model registry.",
+        "Build a CI/CD automated test & deploy pipeline with GitHub Actions and DockerHub."
+      ],
+      "practice": "Set up model versioning, data drift alerts (Evidently AI), and automated rollback strategies."
+    },
+    "sql": {
+      "courses": [
+        {"title": "SQL for Data Science", "provider": "UC Davis / Coursera", "level": "Beginner to Intermediate", "type": "Course", "duration": "4 weeks"},
+        {"title": "Advanced SQL: Window Functions & CTEs", "provider": "DataCamp", "level": "Advanced", "type": "Course", "duration": "2 weeks"}
+      ],
+      "projects": [
+        "Design a normalized e-commerce database schema and write 15 analytical reporting queries with window functions.",
+        "Build a customer cohort retention analysis query using PostgreSQL Common Table Expressions (CTEs)."
+      ],
+      "practice": "Practice LeetCode / HackerRank SQL medium and hard query challenges."
+    },
+    "tableau": {
+      "courses": [
+        {"title": "Data Visualization with Tableau Specialization", "provider": "UC Davis / Coursera", "level": "Beginner to Intermediate", "type": "Specialization", "duration": "5 weeks"}
+      ],
+      "projects": [
+        "Interactive Executive Sales & Revenue Dashboard with dynamic drill-downs and calculated fields.",
+        "Global Healthcare Analytics story presentation using Tableau Public."
+      ],
+      "practice": "Master LOD (Level of Detail) expressions, parameters, and interactive dashboard actions."
+    },
+    "power_bi": {
+      "courses": [
+        {"title": "Microsoft Power BI Data Analyst (PL-300)", "provider": "Microsoft Learn", "level": "Intermediate", "type": "Certification Path", "duration": "6 weeks"}
+      ],
+      "projects": [
+        "Supply Chain KPI Dashboard with DAX measures, automated refresh, and star-schema data model."
+      ],
+      "practice": "Write advanced DAX formulas (CALCULATE, FILTER, RELATEDTABLE, time intelligence)."
+    },
+    "generative_ai": {
+      "courses": [
+        {"title": "Generative AI with Large Language Models", "provider": "DeepLearning.AI / AWS", "level": "Intermediate to Advanced", "type": "Course", "duration": "3 weeks"},
+        {"title": "LangChain & Vector Databases Masterclass", "provider": "FreeCodeCamp", "level": "Intermediate", "type": "Course", "duration": "2 weeks"}
+      ],
+      "projects": [
+        "Enterprise Document Search using Retrieval-Augmented Generation (RAG) with FAISS and LangChain.",
+        "AI Coding Assistant with multi-turn memory, schema evaluation, and tool calling."
+      ],
+      "practice": "Evaluate hallucinations, compute BLEU/ROUGE/RAGAS scores, and optimize vector embedding retrieval."
+    },
+    "kubernetes": {
+      "courses": [
+        {"title": "Certified Kubernetes Administrator (CKA) Preparation", "provider": "Mumshad Mannambeth / KodeKloud", "level": "Intermediate to Advanced", "type": "Course", "duration": "6 weeks"}
+      ],
+      "projects": [
+        "Deploy a microservices architecture on a local Minikube cluster with Ingress, Secrets, and ConfigMaps."
+      ],
+      "practice": "Write declarative YAML manifests for Deployments, StatefulSets, and Services."
+    },
+    "aws": {
+      "courses": [
+        {"title": "AWS Certified Solutions Architect - Associate", "provider": "Stephane Maarek / Udemy", "level": "Intermediate", "type": "Course", "duration": "6 weeks"}
+      ],
+      "projects": [
+        "Serverless image processing pipeline using AWS S3, Lambda, and DynamoDB."
+      ],
+      "practice": "Configure IAM least-privilege roles, VPC subnets, and EC2 auto-scaling groups."
+    },
+    "git": {
+      "courses": [
+        {"title": "Version Control with Git", "provider": "Atlassian / Coursera", "level": "Beginner to Intermediate", "type": "Course", "duration": "2 weeks"}
+      ],
+      "projects": [
+        "Contribute to an open-source GitHub repository following standard pull-request, issue, and branch workflows."
+      ],
+      "practice": "Master git rebase -i, resolving merge conflicts, cherry-picking, and conventional commit messages."
+    }
+  }
+}

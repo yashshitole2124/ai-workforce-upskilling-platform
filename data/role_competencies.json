@@ -1,0 +1,141 @@
+{
+  "roles": [
+    {
+      "role_id": "ml_engineer",
+      "role_title": "Machine Learning Engineer",
+      "domain": "Artificial Intelligence & Data Science",
+      "description": "Designs, builds, and deploys scalable machine learning models and pipelines into production environments.",
+      "expected_competencies": [
+        {"skill_id": "python", "canonical_name": "Python", "importance": "Critical", "weight": 3.0, "expected_proficiency": "Advanced"},
+        {"skill_id": "machine_learning", "canonical_name": "Machine Learning", "importance": "Critical", "weight": 3.0, "expected_proficiency": "Advanced"},
+        {"skill_id": "deep_learning", "canonical_name": "Deep Learning", "importance": "High", "weight": 2.5, "expected_proficiency": "Intermediate"},
+        {"skill_id": "pytorch", "canonical_name": "PyTorch", "importance": "High", "weight": 2.5, "expected_proficiency": "Intermediate"},
+        {"skill_id": "scikit_learn", "canonical_name": "Scikit-Learn", "importance": "High", "weight": 2.0, "expected_proficiency": "Advanced"},
+        {"skill_id": "docker", "canonical_name": "Docker", "importance": "Critical", "weight": 3.0, "expected_proficiency": "Intermediate"},
+        {"skill_id": "fastapi", "canonical_name": "FastAPI", "importance": "High", "weight": 2.0, "expected_proficiency": "Intermediate"},
+        {"skill_id": "mlops", "canonical_name": "MLOps", "importance": "Critical", "weight": 3.0, "expected_proficiency": "Intermediate"},
+        {"skill_id": "sql", "canonical_name": "SQL", "importance": "High", "weight": 2.0, "expected_proficiency": "Intermediate"},
+        {"skill_id": "git", "canonical_name": "Git & GitHub", "importance": "High", "weight": 2.0, "expected_proficiency": "Intermediate"},
+        {"skill_id": "ci_cd", "canonical_name": "CI/CD & DevOps", "importance": "Medium", "weight": 1.5, "expected_proficiency": "Beginner"},
+        {"skill_id": "aws", "canonical_name": "AWS (Amazon Web Services)", "importance": "High", "weight": 2.0, "expected_proficiency": "Intermediate"}
+      ],
+      "responsibilities": [
+        "Develop and optimize predictive models using Scikit-Learn, PyTorch, or TensorFlow.",
+        "Containerize models using Docker and deploy high-throughput inference APIs with FastAPI.",
+        "Establish automated CI/CD and MLOps pipelines for model retraining, tracking, and drift detection.",
+        "Collaborate with data engineers to build robust data preprocessing and feature storage workflows."
+      ]
+    },
+    {
+      "role_id": "data_analyst",
+      "role_title": "Data Analyst",
+      "domain": "Business Intelligence & Analytics",
+      "description": "Transforms raw transactional and business data into actionable visual insights, KPI dashboards, and statistical reports.",
+      "expected_competencies": [
+        {"skill_id": "sql", "canonical_name": "SQL", "importance": "Critical", "weight": 3.0, "expected_proficiency": "Advanced"},
+        {"skill_id": "excel", "canonical_name": "Microsoft Excel", "importance": "Critical", "weight": 3.0, "expected_proficiency": "Advanced"},
+        {"skill_id": "python", "canonical_name": "Python", "importance": "High", "weight": 2.5, "expected_proficiency": "Intermediate"},
+        {"skill_id": "pandas", "canonical_name": "Pandas", "importance": "High", "weight": 2.5, "expected_proficiency": "Intermediate"},
+        {"skill_id": "tableau", "canonical_name": "Tableau", "importance": "High", "weight": 2.5, "expected_proficiency": "Intermediate"},
+        {"skill_id": "power_bi", "canonical_name": "Power BI", "importance": "High", "weight": 2.5, "expected_proficiency": "Intermediate"},
+        {"skill_id": "statistics", "canonical_name": "Statistics & Probability", "importance": "Critical", "weight": 3.0, "expected_proficiency": "Intermediate"},
+        {"skill_id": "communication", "canonical_name": "Communication & Collaboration", "importance": "High", "weight": 2.0, "expected_proficiency": "Advanced"},
+        {"skill_id": "git", "canonical_name": "Git & GitHub", "importance": "Medium", "weight": 1.5, "expected_proficiency": "Beginner"}
+      ],
+      "responsibilities": [
+        "Write complex SQL queries (aggregations, CTEs, window functions) to extract business data.",
+        "Build executive dashboards in Tableau or Power BI with automated data refreshes.",
+        "Perform exploratory data analysis and hypothesis testing to validate market trends.",
+        "Present analytical findings and strategic recommendations to cross-functional stakeholders."
+      ]
+    },
+    {
+      "role_id": "ai_engineer",
+      "role_title": "AI / Generative AI Engineer",
+      "domain": "Artificial Intelligence & LLMs",
+      "description": "Architects intelligent systems leveraging Large Language Models, Retrieval-Augmented Generation (RAG), and agentic workflows.",
+      "expected_competencies": [
+        {"skill_id": "python", "canonical_name": "Python", "importance": "Critical", "weight": 3.0, "expected_proficiency": "Advanced"},
+        {"skill_id": "generative_ai", "canonical_name": "Generative AI", "importance": "Critical", "weight": 3.0, "expected_proficiency": "Advanced"},
+        {"skill_id": "nlp", "canonical_name": "Natural Language Processing", "importance": "Critical", "weight": 3.0, "expected_proficiency": "Advanced"},
+        {"skill_id": "pytorch", "canonical_name": "PyTorch", "importance": "High", "weight": 2.5, "expected_proficiency": "Intermediate"},
+        {"skill_id": "fastapi", "canonical_name": "FastAPI", "importance": "High", "weight": 2.5, "expected_proficiency": "Intermediate"},
+        {"skill_id": "docker", "canonical_name": "Docker", "importance": "High", "weight": 2.0, "expected_proficiency": "Intermediate"},
+        {"skill_id": "redis", "canonical_name": "Redis", "importance": "Medium", "weight": 1.5, "expected_proficiency": "Intermediate"},
+        {"skill_id": "aws", "canonical_name": "AWS (Amazon Web Services)", "importance": "High", "weight": 2.0, "expected_proficiency": "Intermediate"},
+        {"skill_id": "git", "canonical_name": "Git & GitHub", "importance": "High", "weight": 2.0, "expected_proficiency": "Intermediate"}
+      ],
+      "responsibilities": [
+        "Implement production-grade RAG systems with vector databases and semantic chunking.",
+        "Fine-tune open-source LLMs and optimize prompt chains using evaluation frameworks.",
+        "Build resilient streaming APIs using FastAPI and async Python.",
+        "Monitor latency, token economics, and guardrail compliance in generative AI applications."
+      ]
+    },
+    {
+      "role_id": "software_developer",
+      "role_title": "Software Developer (Full Stack / Backend)",
+      "domain": "Software Engineering",
+      "description": "Builds robust, scalable web applications, RESTful microservices, and interactive user interfaces.",
+      "expected_competencies": [
+        {"skill_id": "data_structures", "canonical_name": "Data Structures & Algorithms", "importance": "Critical", "weight": 3.0, "expected_proficiency": "Advanced"},
+        {"skill_id": "python", "canonical_name": "Python", "importance": "High", "weight": 2.5, "expected_proficiency": "Advanced"},
+        {"skill_id": "javascript", "canonical_name": "JavaScript", "importance": "High", "weight": 2.5, "expected_proficiency": "Intermediate"},
+        {"skill_id": "react", "canonical_name": "React.js", "importance": "High", "weight": 2.5, "expected_proficiency": "Intermediate"},
+        {"skill_id": "rest_api", "canonical_name": "RESTful APIs", "importance": "Critical", "weight": 3.0, "expected_proficiency": "Advanced"},
+        {"skill_id": "postgresql", "canonical_name": "PostgreSQL", "importance": "High", "weight": 2.5, "expected_proficiency": "Intermediate"},
+        {"skill_id": "docker", "canonical_name": "Docker", "importance": "High", "weight": 2.0, "expected_proficiency": "Intermediate"},
+        {"skill_id": "git", "canonical_name": "Git & GitHub", "importance": "Critical", "weight": 3.0, "expected_proficiency": "Advanced"},
+        {"skill_id": "html_css", "canonical_name": "HTML/CSS", "importance": "Medium", "weight": 1.5, "expected_proficiency": "Intermediate"},
+        {"skill_id": "agile_scrum", "canonical_name": "Agile & Scrum", "importance": "Medium", "weight": 1.5, "expected_proficiency": "Intermediate"}
+      ],
+      "responsibilities": [
+        "Design and maintain scalable REST APIs and microservices.",
+        "Implement responsive and interactive front-end components using React.",
+        "Optimize relational database schema, queries, indexing, and transactional integrity.",
+        "Participate in code reviews, write automated unit tests, and maintain CI/CD pipelines."
+      ]
+    },
+    {
+      "role_id": "cloud_devops",
+      "role_title": "Cloud & DevOps Engineer",
+      "domain": "Infrastructure & Cloud",
+      "description": "Automates infrastructure provisioning, manages container orchestration, and optimizes CI/CD delivery pipelines.",
+      "expected_competencies": [
+        {"skill_id": "docker", "canonical_name": "Docker", "importance": "Critical", "weight": 3.0, "expected_proficiency": "Advanced"},
+        {"skill_id": "kubernetes", "canonical_name": "Kubernetes", "importance": "Critical", "weight": 3.0, "expected_proficiency": "Intermediate"},
+        {"skill_id": "ci_cd", "canonical_name": "CI/CD & DevOps", "importance": "Critical", "weight": 3.0, "expected_proficiency": "Advanced"},
+        {"skill_id": "aws", "canonical_name": "AWS (Amazon Web Services)", "importance": "Critical", "weight": 3.0, "expected_proficiency": "Advanced"},
+        {"skill_id": "linux", "canonical_name": "Linux / Bash", "importance": "Critical", "weight": 3.0, "expected_proficiency": "Advanced"},
+        {"skill_id": "python", "canonical_name": "Python", "importance": "High", "weight": 2.0, "expected_proficiency": "Intermediate"},
+        {"skill_id": "git", "canonical_name": "Git & GitHub", "importance": "High", "weight": 2.0, "expected_proficiency": "Advanced"}
+      ],
+      "responsibilities": [
+        "Deploy and orchestrate containerized applications using Kubernetes clusters.",
+        "Configure automated CI/CD pipelines for automated testing, linting, and deployment.",
+        "Manage cloud infrastructure as code (IaC) on AWS or Azure.",
+        "Monitor system performance, uptime, security hardening, and incident response."
+      ]
+    },
+    {
+      "role_id": "cybersecurity_analyst",
+      "role_title": "Cybersecurity Analyst",
+      "domain": "Security & Information Protection",
+      "description": "Monitors systems for security breaches, assesses vulnerabilities, and enforces protective protocols.",
+      "expected_competencies": [
+        {"skill_id": "cybersecurity_basics", "canonical_name": "Cybersecurity & Network Security", "importance": "Critical", "weight": 3.0, "expected_proficiency": "Advanced"},
+        {"skill_id": "linux", "canonical_name": "Linux / Bash", "importance": "Critical", "weight": 3.0, "expected_proficiency": "Advanced"},
+        {"skill_id": "python", "canonical_name": "Python", "importance": "High", "weight": 2.5, "expected_proficiency": "Intermediate"},
+        {"skill_id": "git", "canonical_name": "Git & GitHub", "importance": "Medium", "weight": 1.5, "expected_proficiency": "Beginner"},
+        {"skill_id": "aws", "canonical_name": "AWS (Amazon Web Services)", "importance": "High", "weight": 2.0, "expected_proficiency": "Intermediate"},
+        {"skill_id": "communication", "canonical_name": "Communication & Collaboration", "importance": "High", "weight": 2.0, "expected_proficiency": "Intermediate"}
+      ],
+      "responsibilities": [
+        "Conduct vulnerability scanning and security audits across cloud and on-prem assets.",
+        "Investigate security incidents, analyze threat vectors, and execute containment procedures.",
+        "Implement access controls, firewall rules, and zero-trust security policies.",
+        "Author incident response reports and security hygiene guides for team members."
+      ]
+    }
+  ]
+}

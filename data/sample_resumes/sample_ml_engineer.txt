@@ -1,0 +1,32 @@
+ALEX CHEN
+San Francisco, CA | alex.chen@example.com | (555) 234-5678 | github.com/alexchen-ml | linkedin.com/in/alexchen-ml
+
+PROFESSIONAL SUMMARY
+Data scientist and machine learning enthusiast with 2+ years of hands-on experience in exploratory data analysis, predictive modeling, and deep learning research. Proficient in Python, PyTorch, Scikit-Learn, and scientific computing libraries. Seeking a Machine Learning Engineer role to apply algorithm design and model development to real-world industrial systems.
+
+EDUCATION
+Bachelor of Science in Computer Science & Artificial Intelligence
+University of California, Berkeley (2020 - 2024) | GPA: 3.82/4.0
+Relevant Coursework: Machine Learning, Deep Neural Networks, Natural Language Processing, Algorithms & Data Structures, Linear Algebra, Probability & Statistics.
+
+TECHNICAL SKILLS
+- Programming Languages: Python, C++, SQL, Bash
+- Machine Learning & Deep Learning: PyTorch, Scikit-Learn, TensorFlow, NumPy, Pandas, OpenCV
+- Tools & Version Control: Git, GitHub, Linux, Jupyter Notebook, VS Code
+- Concepts: Supervised Learning, Unsupervised Learning, Computer Vision, Convolutional Neural Networks, Hyperparameter Tuning, Feature Engineering
+
+PROFESSIONAL EXPERIENCE
+Machine Learning Intern | NeuroVision Labs | June 2023 - May 2024
+- Designed and trained deep learning models in PyTorch for defect detection in aerial drone imagery, boosting classification accuracy by 14%.
+- Preprocessed over 50,000 high-resolution images using OpenCV and NumPy for data augmentation.
+- Applied cross-validation, regularization, and ROC-AUC curve analysis using Scikit-Learn to evaluate model performance across multiple benchmark sets.
+- Collaborated in an agile team environment using Git version control and conducted bi-weekly code reviews.
+
+KEY PROJECTS
+- Multi-Class Sentiment Classifier: Built an NLP text classification system using PyTorch and HuggingFace transformers, achieving 91.4% accuracy on customer review datasets.
+- Automated House Price Predictor: Engineered a regression pipeline in Python with Pandas and Scikit-Learn utilizing Gradient Boosting, Random Forests, and SHAP explainability.
+- Algorithmic Trading Backtester: Developed statistical backtesting routines in Python with Pandas calculating Sharpe ratio, maximum drawdown, and cumulative ROI.
+
+CERTIFICATIONS
+- Deep Learning Specialization - DeepLearning.AI / Coursera (2023)
+- Machine Learning with Python - IBM / Coursera (2022)

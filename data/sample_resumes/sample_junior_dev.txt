@@ -1,0 +1,24 @@
+ROHAN VERMA
+Austin, TX | rohan.verma@example.com | (555) 345-6789 | github.com/rohanverma-dev
+
+PROFILE
+Passionate Computer Science graduate with strong foundations in Data Structures, Algorithms, Object-Oriented Programming, and web development fundamentals. Experienced in building full-stack academic projects using JavaScript, Java, and relational databases. Eager to contribute as a Software Developer.
+
+EDUCATION
+Bachelor of Science in Computer Science
+University of Texas at Dallas (2020 - 2024) | GPA: 3.75/4.0
+Relevant Coursework: Data Structures & Algorithms, Object-Oriented Software Design, Operating Systems, Database Management Systems, Computer Networks.
+
+TECHNICAL SKILLS
+- Languages: Java, C++, JavaScript, HTML/CSS, SQL
+- Frameworks & Libraries: Node.js, Express, React, Bootstrap
+- Databases & Tools: MySQL, PostgreSQL, Git, GitHub, Linux, VS Code
+- Concepts: Object-Oriented Programming (OOP), Data Structures & Algorithms (DSA), RESTful APIs, Agile/Scrum
+
+ACADEMIC & PERSONAL PROJECTS
+- Campus Event Booking Portal: Built a web portal using React, Node.js, Express, and PostgreSQL allowing students to browse and reserve university auditorium seats in real-time.
+- Algorithmic Pathfinding Visualizer: Implemented Dijkstra's and A* search algorithms in JavaScript with an interactive grid canvas.
+- Library Inventory Management System: Designed a Java-based desktop application with MySQL backend implementing secure student checkout transactions.
+
+LEADERSHIP & ACTIVITIES
+- Vice President, ACM Student Chapter: Organized weekly competitive programming sessions on Data Structures and Algorithms for 80+ members.

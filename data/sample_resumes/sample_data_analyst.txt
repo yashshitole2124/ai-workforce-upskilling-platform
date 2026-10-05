@@ -1,0 +1,33 @@
+PRIYA SHARMA
+New York, NY | priya.sharma@example.com | (555) 789-0123 | linkedin.com/in/priyasharma-data
+
+SUMMARY
+Detail-oriented Data Analyst with 3 years of experience transforming complex business datasets into clear, actionable executive insights. Expert in SQL, Advanced Microsoft Excel, Tableau, and exploratory Python data analysis. Proven track record of improving operational KPI tracking and automating weekly reporting cycles.
+
+EDUCATION
+Master of Science in Business Analytics
+New York University (2021 - 2023)
+Bachelor of Technology in Information Technology
+Delhi Technological University (2017 - 2021)
+
+CORE COMPETENCIES & SKILLS
+- Querying & Databases: SQL, PostgreSQL, MySQL, Data Modeling
+- Business Intelligence & Reporting: Tableau, Power BI, Advanced Excel (VLOOKUP, INDEX/MATCH, Pivot Tables, Macros)
+- Scripting & Analytics: Python, Pandas, NumPy, Matplotlib, Seaborn, Statistics & Probability
+- Professional: Stakeholder Communication, KPI Reporting, A/B Testing Analysis, Agile Methodologies
+
+WORK EXPERIENCE
+Data Analyst | Apex Retail Solutions | July 2023 - Present
+- Formulated complex SQL queries (Window functions, CTEs, Joins) on PostgreSQL databases with 5M+ transactions to track churn and customer retention.
+- Created and deployed 8 interactive Tableau dashboards for marketing leadership, reducing manual monthly reporting time by 45%.
+- Performed statistical hypothesis testing and cohort analysis in Python to evaluate the effectiveness of promotional discount campaigns.
+- Partnered with product managers and stakeholders to define key business performance indicators.
+
+Junior Business Analyst | FinEdge Analytics | Aug 2021 - June 2023
+- Automated daily KPI tracking spreadsheets using advanced Excel formulas and VBA macros, saving 6 hours per week.
+- Built exploratory visualizations in Power BI to monitor credit risk scoring across 10 geographical regions.
+- Conducted regular data cleansing and anomaly audits across relational databases.
+
+PROJECTS
+- Customer Lifetime Value (CLV) Segmentation: Analyzed purchase recency, frequency, and monetary value (RFM) using SQL and Python to group 100k+ customer profiles.
+- E-Commerce Operations Dashboard: Designed a complete Tableau storyboard highlighting inventory turnover, fulfillment delays, and gross margins.

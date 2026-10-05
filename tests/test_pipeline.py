@@ -1,0 +1,94 @@
+"""
+Pipeline Unit Tests for AI Workforce Upskilling Platform
+Tests resume parsing, skill extraction, normalization, role mapping, and gap analysis.
+"""
+
+import os
+import sys
+import unittest
+
+# Add project root to sys.path
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, BASE_DIR)
+
+from modules.resume_parser import ResumeParser
+from modules.skill_extractor import SkillExtractor
+from modules.role_engine import RoleEngine
+from modules.gap_analyzer import SkillGapAnalyzer
+from modules.recommender import Recommender
+from modules.ai_mentor import AIMentor
+
+class TestUpskillingPipeline(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.parser = ResumeParser()
+        cls.extractor = SkillExtractor()
+        cls.role_engine = RoleEngine()
+        cls.analyzer = SkillGapAnalyzer()
+        cls.recommender = Recommender()
+        cls.mentor = AIMentor()
+
+    def test_sample_ml_resume_parsing(self):
+        sample_path = os.path.join(BASE_DIR, "data", "sample_resumes", "sample_ml_engineer.txt")
+        self.assertTrue(os.path.exists(sample_path), "Sample ML resume should exist")
+
+        parsed = self.parser.parse(sample_path)
+        self.assertIn("contact_info", parsed)
+        self.assertIn("alex.chen@example.com", parsed["contact_info"]["email"])
+        self.assertTrue(len(parsed["raw_text"]) > 200)
+
+    def test_skill_extraction_and_normalization(self):
+        text = "Experienced in Python programming, PyTorch, Scikit-Learn, and building Docker containers. Familiar with SQL and Git."
+        extracted = self.extractor.extract_skills(text)
+        
+        skills_found = extracted["skills"]
+        # Verify canonical mapping
+        self.assertIn("python", skills_found)
+        self.assertEqual(skills_found["python"]["canonical_name"], "Python")
+        self.assertIn("pytorch", skills_found)
+        self.assertIn("docker", skills_found)
+        self.assertIn("sql", skills_found)
+        self.assertIn("git", skills_found)
+
+    def test_role_engine_roles_available(self):
+        roles = self.role_engine.get_all_roles()
+        self.assertTrue(len(roles) >= 4)
+        role_ids = [r["role_id"] for r in roles]
+        self.assertIn("ml_engineer", role_ids)
+        self.assertIn("data_analyst", role_ids)
+
+    def test_gap_analysis_and_readiness_score(self):
+        sample_path = os.path.join(BASE_DIR, "data", "sample_resumes", "sample_ml_engineer.txt")
+        parsed = self.parser.parse(sample_path)
+        extracted = self.extractor.extract_skills(parsed["raw_text"])
+        
+        ml_role = self.role_engine.get_role_by_id("ml_engineer")
+        self.assertIsNotNone(ml_role)
+
+        analysis = self.analyzer.analyze_gap(extracted, ml_role)
+        self.assertIn("readiness_score", analysis)
+        self.assertTrue(0 <= analysis["readiness_score"] <= 100)
+        self.assertTrue(len(analysis["matches"]) > 0)
+        self.assertTrue(len(analysis["missing_skills"]) > 0)
+
+        # Docker and MLOps should be in missing or gap list for this sample
+        missing_ids = [m["skill_id"] for m in analysis["missing_skills"]]
+        self.assertIn("docker", missing_ids)
+        self.assertIn("mlops", missing_ids)
+
+    def test_recommendation_and_mentor(self):
+        sample_path = os.path.join(BASE_DIR, "data", "sample_resumes", "sample_ml_engineer.txt")
+        parsed = self.parser.parse(sample_path)
+        extracted = self.extractor.extract_skills(parsed["raw_text"])
+        ml_role = self.role_engine.get_role_by_id("ml_engineer")
+        analysis = self.analyzer.analyze_gap(extracted, ml_role)
+
+        roadmap = self.recommender.generate_roadmap(analysis, ml_role)
+        self.assertTrue(len(roadmap["phases"]) >= 1)
+
+        briefing = self.mentor.generate_mentor_briefing("Alex Chen", ml_role["role_title"], analysis)
+        self.assertTrue(len(briefing) > 100)
+        self.assertIn("Readiness Score", briefing)
+
+if __name__ == "__main__":
+    unittest.main()

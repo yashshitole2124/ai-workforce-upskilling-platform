@@ -1,0 +1,365 @@
+{
+  "categories": [
+    "Programming Languages",
+    "Machine Learning & AI",
+    "Data Analysis & Engineering",
+    "Cloud & DevOps",
+    "Web & Backend Development",
+    "Databases & Storage",
+    "Cybersecurity & Networking",
+    "Software Engineering Tools",
+    "Soft Skills & Management"
+  ],
+  "skills": [
+    {
+      "id": "python",
+      "canonical_name": "Python",
+      "category": "Programming Languages",
+      "aliases": ["py", "python3", "python 3", "python programming", "pythonic"],
+      "description": "High-level interpreted programming language widely used in AI, data science, and web development."
+    },
+    {
+      "id": "r_lang",
+      "canonical_name": "R",
+      "category": "Programming Languages",
+      "aliases": ["r programming", "r language", "r-project"],
+      "description": "Programming language for statistical computing and graphics."
+    },
+    {
+      "id": "java",
+      "canonical_name": "Java",
+      "category": "Programming Languages",
+      "aliases": ["core java", "java 8", "java 11", "java 17", "java programming"],
+      "description": "Class-based, object-oriented programming language."
+    },
+    {
+      "id": "cpp",
+      "canonical_name": "C++",
+      "category": "Programming Languages",
+      "aliases": ["cpp", "c plus plus", "c/c++"],
+      "description": "General-purpose systems programming language."
+    },
+    {
+      "id": "csharp",
+      "canonical_name": "C#",
+      "category": "Programming Languages",
+      "aliases": ["c-sharp", "c# .net", "dotnet c#"],
+      "description": "Modern object-oriented language for the .NET platform."
+    },
+    {
+      "id": "javascript",
+      "canonical_name": "JavaScript",
+      "category": "Programming Languages",
+      "aliases": ["js", "es6", "vanilla js", "ecmascript"],
+      "description": "Dynamic scripting language for web pages and browser applications."
+    },
+    {
+      "id": "typescript",
+      "canonical_name": "TypeScript",
+      "category": "Programming Languages",
+      "aliases": ["ts", "typescript lang"],
+      "description": "Typed superset of JavaScript that compiles to plain JavaScript."
+    },
+    {
+      "id": "go",
+      "canonical_name": "Go (Golang)",
+      "category": "Programming Languages",
+      "aliases": ["golang", "go language"],
+      "description": "Open source programming language designed for fast, reliable systems."
+    },
+    {
+      "id": "sql",
+      "canonical_name": "SQL",
+      "category": "Databases & Storage",
+      "aliases": ["structured query language", "tsql", "t-sql", "plsql", "pl/sql", "ansi sql"],
+      "description": "Domain-specific language used in programming and designed for managing data in RDBMS."
+    },
+    {
+      "id": "machine_learning",
+      "canonical_name": "Machine Learning",
+      "category": "Machine Learning & AI",
+      "aliases": ["ml", "machine-learning", "supervised learning", "unsupervised learning"],
+      "description": "Study of computer algorithms that improve automatically through experience and data."
+    },
+    {
+      "id": "deep_learning",
+      "canonical_name": "Deep Learning",
+      "category": "Machine Learning & AI",
+      "aliases": ["dl", "deep-learning", "neural networks", "ann", "cnn", "rnn"],
+      "description": "Subfield of machine learning based on artificial neural networks with representation learning."
+    },
+    {
+      "id": "nlp",
+      "canonical_name": "Natural Language Processing",
+      "category": "Machine Learning & AI",
+      "aliases": ["nlp", "text mining", "natural language processing", "text analytics", "computational linguistics"],
+      "description": "Branch of AI concerned with giving computers the ability to understand text and spoken words."
+    },
+    {
+      "id": "computer_vision",
+      "canonical_name": "Computer Vision",
+      "category": "Machine Learning & AI",
+      "aliases": ["cv", "computer-vision", "image processing", "object detection", "opencv"],
+      "description": "Interdisciplinary scientific field that deals with how computers gain high-level understanding from digital images."
+    },
+    {
+      "id": "generative_ai",
+      "canonical_name": "Generative AI",
+      "category": "Machine Learning & AI",
+      "aliases": ["genai", "generative ai", "llm", "large language models", "rag", "langchain", "prompt engineering"],
+      "description": "Artificial intelligence capable of generating text, images, or other media using generative models."
+    },
+    {
+      "id": "scikit_learn",
+      "canonical_name": "Scikit-Learn",
+      "category": "Machine Learning & AI",
+      "aliases": ["sklearn", "scikit learn", "scikit-learn"],
+      "description": "Python library for machine learning providing simple and efficient tools for predictive data analysis."
+    },
+    {
+      "id": "tensorflow",
+      "canonical_name": "TensorFlow",
+      "category": "Machine Learning & AI",
+      "aliases": ["tf", "tensorflow 2", "tf2", "tf.keras"],
+      "description": "End-to-end open source platform for machine learning developed by Google."
+    },
+    {
+      "id": "pytorch",
+      "canonical_name": "PyTorch",
+      "category": "Machine Learning & AI",
+      "aliases": ["torch", "pytorch library", "pytorch lightning"],
+      "description": "Open source machine learning framework based on the Torch library."
+    },
+    {
+      "id": "pandas",
+      "canonical_name": "Pandas",
+      "category": "Data Analysis & Engineering",
+      "aliases": ["pandas library", "pd", "dataframes"],
+      "description": "Fast, powerful, flexible and easy to use open source data analysis and manipulation tool."
+    },
+    {
+      "id": "numpy",
+      "canonical_name": "NumPy",
+      "category": "Data Analysis & Engineering",
+      "aliases": ["numpy library", "np", "numerical python"],
+      "description": "Fundamental package for scientific computing with Python."
+    },
+    {
+      "id": "tableau",
+      "canonical_name": "Tableau",
+      "category": "Data Analysis & Engineering",
+      "aliases": ["tableau desktop", "tableau server", "tableau bi"],
+      "description": "Visual analytics platform transforming the way we use data to solve problems."
+    },
+    {
+      "id": "power_bi",
+      "canonical_name": "Power BI",
+      "category": "Data Analysis & Engineering",
+      "aliases": ["powerbi", "microsoft power bi", "ms power bi", "dax"],
+      "description": "Interactive data visualization software product developed by Microsoft."
+    },
+    {
+      "id": "excel",
+      "canonical_name": "Microsoft Excel",
+      "category": "Data Analysis & Engineering",
+      "aliases": ["ms excel", "excel", "spreadsheets", "vlookup", "pivot tables"],
+      "description": "Spreadsheet software developed by Microsoft featuring calculation and graphing tools."
+    },
+    {
+      "id": "spark",
+      "canonical_name": "Apache Spark",
+      "category": "Data Analysis & Engineering",
+      "aliases": ["spark", "pyspark", "spark sql", "spark streaming"],
+      "description": "Unified analytics engine for large-scale data processing."
+    },
+    {
+      "id": "hadoop",
+      "canonical_name": "Apache Hadoop",
+      "category": "Data Analysis & Engineering",
+      "aliases": ["hadoop", "hdfs", "mapreduce", "hive"],
+      "description": "Framework that allows for the distributed processing of large data sets across clusters."
+    },
+    {
+      "id": "kafka",
+      "canonical_name": "Apache Kafka",
+      "category": "Data Analysis & Engineering",
+      "aliases": ["kafka", "event streaming", "kafka streaming"],
+      "description": "Distributed event store and stream-processing platform."
+    },
+    {
+      "id": "fastapi",
+      "canonical_name": "FastAPI",
+      "category": "Web & Backend Development",
+      "aliases": ["fast-api", "fastapi framework"],
+      "description": "Modern, fast (high-performance) web framework for building APIs with Python."
+    },
+    {
+      "id": "flask",
+      "canonical_name": "Flask",
+      "category": "Web & Backend Development",
+      "aliases": ["flask framework", "python flask"],
+      "description": "Micro web framework written in Python."
+    },
+    {
+      "id": "django",
+      "canonical_name": "Django",
+      "category": "Web & Backend Development",
+      "aliases": ["django framework", "django rest framework", "drf"],
+      "description": "High-level Python web framework that encourages rapid development and clean design."
+    },
+    {
+      "id": "nodejs",
+      "canonical_name": "Node.js",
+      "category": "Web & Backend Development",
+      "aliases": ["node", "nodejs", "node js", "express", "expressjs", "express.js"],
+      "description": "Open-source, cross-platform JavaScript runtime environment."
+    },
+    {
+      "id": "react",
+      "canonical_name": "React.js",
+      "category": "Web & Backend Development",
+      "aliases": ["react", "reactjs", "react.js", "react hooks", "redux"],
+      "description": "Free and open-source front-end JavaScript library for building user interfaces."
+    },
+    {
+      "id": "html_css",
+      "canonical_name": "HTML/CSS",
+      "category": "Web & Backend Development",
+      "aliases": ["html", "html5", "css", "css3", "bootstrap", "tailwind", "tailwind css"],
+      "description": "Core technologies for building web pages and web applications."
+    },
+    {
+      "id": "rest_api",
+      "canonical_name": "RESTful APIs",
+      "category": "Web & Backend Development",
+      "aliases": ["rest api", "rest apis", "restful api", "rest", "web api", "postman"],
+      "description": "Architectural style for an application programming interface that uses HTTP requests."
+    },
+    {
+      "id": "postgresql",
+      "canonical_name": "PostgreSQL",
+      "category": "Databases & Storage",
+      "aliases": ["postgres", "postgresql", "psql"],
+      "description": "Powerful, open source object-relational database system."
+    },
+    {
+      "id": "mysql",
+      "canonical_name": "MySQL",
+      "category": "Databases & Storage",
+      "aliases": ["mysql database", "my sql"],
+      "description": "Open-source relational database management system."
+    },
+    {
+      "id": "mongodb",
+      "canonical_name": "MongoDB",
+      "category": "Databases & Storage",
+      "aliases": ["mongo", "mongodb", "nosql", "documentdb"],
+      "description": "Source-available cross-platform document-oriented database program."
+    },
+    {
+      "id": "redis",
+      "canonical_name": "Redis",
+      "category": "Databases & Storage",
+      "aliases": ["redis cache", "redis key-value"],
+      "description": "In-memory data structure store, used as a distributed, in-memory key–value database."
+    },
+    {
+      "id": "docker",
+      "canonical_name": "Docker",
+      "category": "Cloud & DevOps",
+      "aliases": ["docker", "containerization", "dockerfile", "docker-compose", "containers"],
+      "description": "Platform designed to help developers build, share, and run modern applications using containers."
+    },
+    {
+      "id": "kubernetes",
+      "canonical_name": "Kubernetes",
+      "category": "Cloud & DevOps",
+      "aliases": ["k8s", "kubernetes cluster", "container orchestration"],
+      "description": "Open-source system for automating deployment, scaling, and management of containerized applications."
+    },
+    {
+      "id": "aws",
+      "canonical_name": "AWS (Amazon Web Services)",
+      "category": "Cloud & DevOps",
+      "aliases": ["aws", "amazon web services", "ec2", "s3", "lambda", "sagemaker"],
+      "description": "Comprehensive, evolving cloud computing platform provided by Amazon."
+    },
+    {
+      "id": "azure",
+      "canonical_name": "Microsoft Azure",
+      "category": "Cloud & DevOps",
+      "aliases": ["azure", "ms azure", "azure cloud", "azure ml"],
+      "description": "Cloud computing service created by Microsoft for building, testing, and managing applications."
+    },
+    {
+      "id": "gcp",
+      "canonical_name": "Google Cloud Platform (GCP)",
+      "category": "Cloud & DevOps",
+      "aliases": ["gcp", "google cloud", "bigquery", "vertex ai"],
+      "description": "Suite of cloud computing services that runs on the same infrastructure that Google uses."
+    },
+    {
+      "id": "ci_cd",
+      "canonical_name": "CI/CD & DevOps",
+      "category": "Cloud & DevOps",
+      "aliases": ["ci/cd", "continuous integration", "continuous deployment", "github actions", "jenkins", "gitlab ci"],
+      "description": "Combined practice of continuous integration and continuous delivery/deployment."
+    },
+    {
+      "id": "mlops",
+      "canonical_name": "MLOps",
+      "category": "Cloud & DevOps",
+      "aliases": ["mlops", "machine learning operations", "mlflow", "dvc", "kubeflow", "model deployment", "model monitoring"],
+      "description": "Practices that aim to deploy and maintain machine learning models in production reliably and efficiently."
+    },
+    {
+      "id": "git",
+      "canonical_name": "Git & GitHub",
+      "category": "Software Engineering Tools",
+      "aliases": ["git", "github", "version control", "gitlab", "vcs"],
+      "description": "Distributed version control system for tracking changes in source code during software development."
+    },
+    {
+      "id": "linux",
+      "canonical_name": "Linux / Bash",
+      "category": "Software Engineering Tools",
+      "aliases": ["linux", "ubuntu", "bash", "shell scripting", "unix", "cli"],
+      "description": "Open-source Unix-like operating systems and command-line shell environments."
+    },
+    {
+      "id": "data_structures",
+      "canonical_name": "Data Structures & Algorithms",
+      "category": "Software Engineering Tools",
+      "aliases": ["dsa", "data structures", "algorithms", "problem solving", "algorithmic thinking"],
+      "description": "Methods of organizing and storing data along with step-by-step procedures for calculations."
+    },
+    {
+      "id": "statistics",
+      "canonical_name": "Statistics & Probability",
+      "category": "Data Analysis & Engineering",
+      "aliases": ["statistics", "probability", "hypothesis testing", "regression analysis", "statistical modeling", "a/b testing"],
+      "description": "Mathematical science pertaining to the collection, analysis, interpretation or explanation, and presentation of data."
+    },
+    {
+      "id": "cybersecurity_basics",
+      "canonical_name": "Cybersecurity & Network Security",
+      "category": "Cybersecurity & Networking",
+      "aliases": ["cybersecurity", "network security", "information security", "infosec", "penetration testing", "ethical hacking", "owasp"],
+      "description": "Protection of computer systems and networks from attack, damage, or unauthorized access."
+    },
+    {
+      "id": "communication",
+      "canonical_name": "Communication & Collaboration",
+      "category": "Soft Skills & Management",
+      "aliases": ["communication", "team collaboration", "presentation", "stakeholder management", "technical writing"],
+      "description": "Ability to convey technical ideas clearly to both technical and non-technical stakeholders."
+    },
+    {
+      "id": "agile_scrum",
+      "canonical_name": "Agile & Scrum",
+      "category": "Soft Skills & Management",
+      "aliases": ["agile", "scrum", "kanban", "jira", "sprint planning"],
+      "description": "Iterative approach to project management and software development."
+    }
+  ]
+}
