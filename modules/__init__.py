@@ -7,6 +7,9 @@ from .role_engine import RoleEngine
 from .gap_analyzer import SkillGapAnalyzer
 from .recommender import Recommender
 from .ai_mentor import AIMentor
+from .assessment_engine import AssessmentEngine
+from .jd_matcher import JDMatcher
+from .career_analytics import CareerAnalytics
 
 __all__ = [
     "ResumeParser",
@@ -14,5 +17,8 @@ __all__ = [
     "RoleEngine",
     "SkillGapAnalyzer",
     "Recommender",
-    "AIMentor"
+    "AIMentor",
+    "AssessmentEngine",
+    "JDMatcher",
+    "CareerAnalytics"
 ]

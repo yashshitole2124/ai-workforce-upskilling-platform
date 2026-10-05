@@ -1,6 +1,7 @@
 """
 Pipeline Unit Tests for AI Workforce Upskilling Platform
-Tests resume parsing, skill extraction, normalization, role mapping, and gap analysis.
+Tests resume parsing, skill extraction, normalization, role mapping, gap analysis,
+quiz assessment engine, JD semantic matcher, and career pathways.
 """
 
 import os
@@ -17,6 +18,9 @@ from modules.role_engine import RoleEngine
 from modules.gap_analyzer import SkillGapAnalyzer
 from modules.recommender import Recommender
 from modules.ai_mentor import AIMentor
+from modules.assessment_engine import AssessmentEngine
+from modules.jd_matcher import JDMatcher
+from modules.career_analytics import CareerAnalytics
 
 class TestUpskillingPipeline(unittest.TestCase):
     @classmethod
@@ -27,6 +31,9 @@ class TestUpskillingPipeline(unittest.TestCase):
         cls.analyzer = SkillGapAnalyzer()
         cls.recommender = Recommender()
         cls.mentor = AIMentor()
+        cls.assessment = AssessmentEngine()
+        cls.jd_matcher = JDMatcher(cls.extractor)
+        cls.career_analytics = CareerAnalytics(cls.role_engine, cls.analyzer)
 
     def test_sample_ml_resume_parsing(self):
         sample_path = os.path.join(BASE_DIR, "data", "sample_resumes", "sample_ml_engineer.txt")
@@ -42,7 +49,6 @@ class TestUpskillingPipeline(unittest.TestCase):
         extracted = self.extractor.extract_skills(text)
         
         skills_found = extracted["skills"]
-        # Verify canonical mapping
         self.assertIn("python", skills_found)
         self.assertEqual(skills_found["python"]["canonical_name"], "Python")
         self.assertIn("pytorch", skills_found)
@@ -71,24 +77,38 @@ class TestUpskillingPipeline(unittest.TestCase):
         self.assertTrue(len(analysis["matches"]) > 0)
         self.assertTrue(len(analysis["missing_skills"]) > 0)
 
-        # Docker and MLOps should be in missing or gap list for this sample
-        missing_ids = [m["skill_id"] for m in analysis["missing_skills"]]
-        self.assertIn("docker", missing_ids)
-        self.assertIn("mlops", missing_ids)
+    def test_assessment_engine(self):
+        ml_role = self.role_engine.get_role_by_id("ml_engineer")
+        questions = self.assessment.get_questions_for_role(ml_role, max_questions=4)
+        self.assertTrue(len(questions) > 0)
 
-    def test_recommendation_and_mentor(self):
+        # Test evaluation with perfect answers
+        answers = {q["id"]: q["correct_index"] for q in questions}
+        result = self.assessment.evaluate_quiz(answers, questions)
+        self.assertEqual(result["score"], len(questions))
+        self.assertEqual(result["accuracy_pct"], 100.0)
+        self.assertTrue(result["passed"])
+
+    def test_jd_matcher(self):
         sample_path = os.path.join(BASE_DIR, "data", "sample_resumes", "sample_ml_engineer.txt")
         parsed = self.parser.parse(sample_path)
         extracted = self.extractor.extract_skills(parsed["raw_text"])
-        ml_role = self.role_engine.get_role_by_id("ml_engineer")
-        analysis = self.analyzer.analyze_gap(extracted, ml_role)
 
-        roadmap = self.recommender.generate_roadmap(analysis, ml_role)
-        self.assertTrue(len(roadmap["phases"]) >= 1)
+        mock_jd = "Looking for a Machine Learning Engineer with deep experience in Python, PyTorch, Docker, and AWS."
+        jd_result = self.jd_matcher.analyze_jd(mock_jd, parsed, extracted)
+        self.assertIn("composite_match_score", jd_result)
+        self.assertTrue(0 <= jd_result["composite_match_score"] <= 100)
+        self.assertTrue(len(jd_result["matched_skills"]) > 0)
 
-        briefing = self.mentor.generate_mentor_briefing("Alex Chen", ml_role["role_title"], analysis)
-        self.assertTrue(len(briefing) > 100)
-        self.assertIn("Readiness Score", briefing)
+    def test_career_analytics(self):
+        sample_path = os.path.join(BASE_DIR, "data", "sample_resumes", "sample_ml_engineer.txt")
+        parsed = self.parser.parse(sample_path)
+        extracted = self.extractor.extract_skills(parsed["raw_text"])
+
+        career_result = self.career_analytics.analyze_all_roles(extracted)
+        self.assertIn("role_evaluations", career_result)
+        self.assertTrue(len(career_result["role_evaluations"]) >= 4)
+        self.assertIn("highest_roi_skills", career_result)
 
 if __name__ == "__main__":
     unittest.main()

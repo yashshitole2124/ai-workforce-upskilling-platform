@@ -1,0 +1,184 @@
+{
+  "questions": [
+    {
+      "id": "py_1",
+      "skill_id": "python",
+      "skill_name": "Python",
+      "level": "Intermediate",
+      "question": "What is the difference between a Python list and a generator expression when dealing with large datasets?",
+      "options": [
+        "Lists execute faster in loops, but generators can only store integers.",
+        "Generators produce items lazily on demand (one at a time) conserving memory, while lists allocate memory for all items at once.",
+        "Generators are immutable lists that automatically run in separate operating system threads.",
+        "Lists support indexing and slicing, while generators automatically sort elements."
+      ],
+      "correct_index": 1,
+      "explanation": "Generators yield elements one by one via lazy evaluation, keeping memory usage constant regardless of dataset size, whereas list comprehensions build the entire list in memory."
+    },
+    {
+      "id": "py_2",
+      "skill_id": "python",
+      "skill_name": "Python",
+      "level": "Advanced",
+      "question": "In Python, what is the primary role of the Global Interpreter Lock (GIL)?",
+      "options": [
+        "It prevents multiple processes from accessing the same file on disk simultaneously.",
+        "It optimizes JIT compilation by caching bytecode functions.",
+        "It is a mutex that prevents multiple native threads from executing Python bytecodes at once in CPython.",
+        "It secures socket connections against buffer overflow attacks."
+      ],
+      "correct_index": 2,
+      "explanation": "CPython uses the GIL to ensure thread-safe memory management, meaning only one thread executes Python bytecode at any given moment."
+    },
+    {
+      "id": "ml_1",
+      "skill_id": "machine_learning",
+      "skill_name": "Machine Learning",
+      "level": "Intermediate",
+      "question": "Why is stratified K-fold cross-validation preferred over standard K-fold cross-validation in classification tasks?",
+      "options": [
+        "It guarantees training runs twice as fast by skipping redundant splits.",
+        "It preserves the percentage of samples for each class in every fold, preventing class distribution bias in imbalanced datasets.",
+        "It automatically optimizes hyperparameters using Bayesian optimization during every fold.",
+        "It scales all numerical features to zero mean and unit variance."
+      ],
+      "correct_index": 1,
+      "explanation": "Stratified K-fold ensures each fold contains approximately the same percentage of target class labels as the complete dataset, which is critical for imbalanced data."
+    },
+    {
+      "id": "ml_2",
+      "skill_id": "machine_learning",
+      "skill_name": "Machine Learning",
+      "level": "Advanced",
+      "question": "When observing high training accuracy (99%) but low validation accuracy (64%), which phenomenon is occurring and how should it be addressed?",
+      "options": [
+        "Underfitting; increase model capacity and decrease regularization.",
+        "Overfitting; apply L1/L2 regularization, dropout, pruning, or collect more training data.",
+        "Data drift; re-normalize the target variables using min-max scaling.",
+        "High bias; train for fewer epochs with a higher learning rate."
+      ],
+      "correct_index": 1,
+      "explanation": "A high gap between training and validation accuracy is the classic signature of overfitting (high variance). Regularization, dropout, early stopping, and data augmentation help mitigate it."
+    },
+    {
+      "id": "sql_1",
+      "skill_id": "sql",
+      "skill_name": "SQL",
+      "level": "Intermediate",
+      "question": "Which SQL window function computes a row's sequential ranking without leaving gaps in ranking values for ties?",
+      "options": [
+        "ROW_NUMBER()",
+        "RANK()",
+        "DENSE_RANK()",
+        "NTILE()"
+      ],
+      "correct_index": 2,
+      "explanation": "DENSE_RANK() assigns consecutive rank values to distinct order items without skipping numbers after tied values, unlike RANK() which leaves gaps."
+    },
+    {
+      "id": "sql_2",
+      "skill_id": "sql",
+      "skill_name": "SQL",
+      "level": "Advanced",
+      "question": "What is the key performance benefit of Common Table Expressions (CTEs) when using the RECURSIVE keyword in PostgreSQL/MySQL?",
+      "options": [
+        "It automatically indexes temporary columns in memory.",
+        "It allows querying hierarchical, tree-structured, or graph data (like organizational charts or bill-of-materials) iteratively.",
+        "It converts SQL queries into parallel MapReduce jobs across multiple worker nodes.",
+        "It bypasses foreign key constraints during batch inserts."
+      ],
+      "correct_index": 1,
+      "explanation": "RECURSIVE CTEs repeatedly evaluate a subquery until no more rows are returned, making them the standard tool for querying hierarchical and parent-child relational trees."
+    },
+    {
+      "id": "dock_1",
+      "skill_id": "docker",
+      "skill_name": "Docker",
+      "level": "Intermediate",
+      "question": "What is the primary advantage of multi-stage Docker builds?",
+      "options": [
+        "They run containers across multiple Kubernetes pods concurrently.",
+        "They allow separating the build environment from the minimal runtime image, significantly reducing final image size and attack surface.",
+        "They automatically encrypt environment variables inside the container.",
+        "They eliminate the need to install a host container runtime."
+      ],
+      "correct_index": 1,
+      "explanation": "Multi-stage builds allow developers to compile code and dependencies in a heavy builder stage, copying only necessary binaries and runtime dependencies into a lean final image."
+    },
+    {
+      "id": "fast_1",
+      "skill_id": "fastapi",
+      "skill_name": "FastAPI",
+      "level": "Intermediate",
+      "question": "How does FastAPI achieve automated input validation, serialization, and interactive OpenAPI documentation?",
+      "options": [
+        "By interpreting docstrings at runtime with regular expressions.",
+        "By leveraging Python type hints and Pydantic schema models.",
+        "By enforcing strict XML-RPC definitions in a configuration file.",
+        "By compiling Python scripts into C extensions before execution."
+      ],
+      "correct_index": 1,
+      "explanation": "FastAPI is built on Python type annotations and Pydantic models. It automatically parses request payloads, enforces types, formats errors, and generates Swagger/OpenAPI documentation."
+    },
+    {
+      "id": "mlops_1",
+      "skill_id": "mlops",
+      "skill_name": "MLOps",
+      "level": "Intermediate",
+      "question": "In a production ML system, what does 'concept drift' mean?",
+      "options": [
+        "The server hardware slows down due to CPU throttling.",
+        "The statistical distribution of input features changes, while the relationship with the target remains identical.",
+        "The statistical relationship between the input features and target variable changes over time, degrading model predictive power.",
+        "The model weights are corrupted in the Redis cache."
+      ],
+      "correct_index": 2,
+      "explanation": "Concept drift occurs when the mapping function $P(Y|X)$ changes over time (e.g. consumer purchasing patterns change during macro-economic shifts), necessitating model retraining."
+    },
+    {
+      "id": "torch_1",
+      "skill_id": "pytorch",
+      "skill_name": "PyTorch",
+      "level": "Intermediate",
+      "question": "In PyTorch, why should you call 'optimizer.zero_grad()' before executing 'loss.backward()' in the training loop?",
+      "options": [
+        "To reset the model's weights to random initialization values.",
+        "Because PyTorch accumulates gradients by default across backward passes; failing to zero them leads to incorrect gradient updates.",
+        "To clear GPU VRAM cache and prevent out-of-memory errors.",
+        "To normalize loss values between 0.0 and 1.0."
+      ],
+      "correct_index": 1,
+      "explanation": "PyTorch buffers and accumulates gradients on every backward() call. Calling optimizer.zero_grad() resets all parameter gradients to zero before computing the current batch gradient."
+    },
+    {
+      "id": "tab_1",
+      "skill_id": "tableau",
+      "skill_name": "Tableau",
+      "level": "Intermediate",
+      "question": "What is the purpose of an 'INCLUDE' Level of Detail (LOD) expression in Tableau?",
+      "options": [
+        "It excludes specific dimensions from the visualization canvas.",
+        "It calculates values using specified dimensions in addition to whatever dimensions are currently displayed in the view.",
+        "It merges two disparate data sources without establishing a foreign key relationship.",
+        "It forces the visualization to refresh data from SQL live rather than extracts."
+      ],
+      "correct_index": 1,
+      "explanation": "INCLUDE expressions calculate aggregates at a finer level of detail by including dimensions that may not be present in the active worksheet visualization."
+    },
+    {
+      "id": "stat_1",
+      "skill_id": "statistics",
+      "skill_name": "Statistics & Probability",
+      "level": "Intermediate",
+      "question": "In an A/B hypothesis test, what does a p-value of 0.03 indicate when the significance threshold (alpha) is set to 0.05?",
+      "options": [
+        "There is a 3% probability that the alternative hypothesis is true.",
+        "The null hypothesis can be rejected with statistical significance because p < 0.05.",
+        "The test is inconclusive and requires 97% more sample observations.",
+        "The effect size is exactly 0.03 standard deviations."
+      ],
+      "correct_index": 1,
+      "explanation": "Since p-value (0.03) is less than alpha (0.05), we reject the null hypothesis and conclude that the observed difference is statistically significant."
+    }
+  ]
+}

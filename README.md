@@ -1,18 +1,35 @@
 # 🎓 AI Workforce Upskilling Platform
-### Final Year Capstone Project — Implementation for Project Review 2
+### Final Year Capstone Project — Project Review 2 Implementation
 
-An end-to-end intelligent learning and workforce-development system that extracts competencies from candidate resumes, matches them against industry role benchmarks, identifies prioritized skill gaps, computes a quantitative Role Readiness Score, and generates a personalized upskilling roadmap.
+An end-to-end intelligent workforce learning and skill intelligence platform that extracts competencies from resumes, matches them against industry role benchmarks, identifies prioritized skill gaps, computes quantitative Role Readiness Scores, delivers dynamic skill assessments, and matches custom job postings using NLP.
 
 ---
 
-## 📌 Project Review 2 Scope & Objectives Met
+## 🌟 3 Newly Added Features (Accurately Working)
 
-According to the Project Action Plan:
-- **Phase 1 & 2 (Taxonomy & Role Profiles):** Standardized skill taxonomy across 9 domains with 150+ aliases/synonyms; benchmark competency matrices for industry roles (ML Engineer, Data Analyst, AI/GenAI Engineer, Software Developer, Cloud & DevOps, Cybersecurity).
-- **Phase 3 (Resume Parsing & Skill Extraction):** Multi-format parser supporting **PDF, DOCX, and TXT**, extracting candidate contact info, degrees, and sections. Semantic skill extraction with alias normalization and context-based proficiency estimation.
-- **Phase 4 (Skill Gap & Readiness Engine):** Weighted competency gap analysis, proficiency level comparison, prioritized gap ranking ($P_1$ Critical, $P_2$ High, $P_3$ Medium), and overall Role Readiness percentage ($0-100\%$).
-- **Personalized Roadmap Prototype:** Dynamic multi-phase upskilling plan recommending targeted courses, certifications, and portfolio projects.
-- **Conversational AI Mentor:** Context-aware diagnostics and Q&A explaining the rationale behind critical skill gaps.
+Based on a detailed analysis of the **Project Report Objectives & Action Plan**, 3 advanced features have been added:
+
+### 1. 📝 Dynamic AI Skill Assessment & Real-Time Upgrade Loop (Objective 5)
+- **Problem Solved:** Conventional systems provide static gap reports without verifying if the learner actually possesses the skill or measuring improvement.
+- **How It Works:** Learner takes an interactive multiple-choice & conceptual skill test tailored to the target role's competencies.
+- **Closed-Loop Feedback:** When the learner scores $\ge 70\%$, their skill proficiency is **dynamically elevated in real-time** (e.g. *Beginner* $\rightarrow$ *Intermediate* $\rightarrow$ *Advanced*), the Role Readiness Score recalculates immediately, and the gap closes with celebratory feedback!
+
+### 2. 🔍 Custom Job Description (JD) Semantic Matcher (AI/ML Framework Item 1-3)
+- **Problem Solved:** Job roles evolve constantly; static role profiles alone cannot evaluate real-world job postings from LinkedIn or Indeed.
+- **How It Works:** Evaluators can paste any live job description. The engine uses **NLP entity extraction** to identify required skills, computes **TF-IDF Vectorization & Cosine Semantic Similarity** between the resume text and the JD, and generates a composite alignment score (0–100%) alongside resume tailoring advice.
+
+### 3. 🚀 Multi-Role Career Pathways & High-ROI Competency Radar (Future Scope Item 8)
+- **Problem Solved:** Learners often do not know which adjacent career path best matches their current profile or which single skill gives the highest return on investment.
+- **How It Works:** Analyzes the candidate profile against all industry roles simultaneously (Data Analyst, ML Engineer, AI Engineer, Software Developer, Cloud & DevOps, Cybersecurity) and ranks **Top 5 High-ROI Skills** that unlock the highest number of roles simultaneously.
+
+---
+
+## 🎨 User-Friendly GUI Enhancements
+
+- **Modern Visual Theme:** Professional indigo/violet gradient hero banner, glassmorphic metric cards, and clean typography (`Plus Jakarta Sans`).
+- **1-Click Benchmark Candidates:** Evaluators can test the entire pipeline in 1 click without needing to find or upload local files.
+- **Interactive Visualizations:** Plotly radar charts, level-difference gap severity bars, and cross-role horizontal comparison bars.
+- **Contextual Explanations:** Full question-by-question explanations in the assessment engine and interactive AI Career Mentor.
 
 ---
 
@@ -41,26 +58,28 @@ According to the Project Action Plan:
             │    Skill Gap Analyzer     │  <-- Weighted Scoring Algorithm
             └──────┬─────────────┬──────┘
                    │             │
-        ┌──────────┴──┐       ┌──┴──────────┐
-        ▼             ▼       ▼             ▼
-   [Readiness   [Prioritized  [Personalized  [AI Career Mentor
-     Score]        Gaps]       Roadmap]       Guidance & Q&A]
+        ┌──────────┴──┐       ┌──┴──────────────────────────────────────┐
+        ▼             ▼       ▼             ▼              ▼            ▼
+   [Readiness   [Prioritized  [Phased     [Skill Assessment [Custom JD   [Multi-Role
+     Score]        Gaps]      Roadmap]     Quiz & Upgrade]   Matcher]    Pathways]
 ```
 
 ---
 
-## 📁 Project Structure
+## 📁 Directory Structure
 
 ```
 ai_upskilling_platform/
-├── app.py                      # Main Streamlit Interactive Web Application
+├── app.py                      # Modern Streamlit Interactive Web Application
 ├── run_app.bat                 # One-click Windows Launcher
-├── requirements.txt            # Python dependencies
-├── README.md                   # Complete documentation & Viva Guide
+├── push_to_github.bat          # One-click GitHub Push Script
+├── requirements.txt            # Dependencies
+├── README.md                   # Full Documentation & Review 2 Guide
 ├── data/
 │   ├── skills_taxonomy.json    # Standardized skills, categories, and synonym aliases
 │   ├── role_competencies.json  # Benchmark competencies, importance weights & proficiencies
 │   ├── learning_resources.json # Curated courses, portfolio projects & practice drills
+│   ├── assessment_questions.json # Dynamic technical quiz question bank
 │   └── sample_resumes/         # Built-in demo resumes for immediate testing
 │       ├── sample_ml_engineer.txt
 │       ├── sample_data_analyst.txt
@@ -72,77 +91,31 @@ ai_upskilling_platform/
 │   ├── role_engine.py          # Role competency benchmark query engine
 │   ├── gap_analyzer.py         # Weighted gap & readiness score algorithm
 │   ├── recommender.py          # Phased personalized roadmap generator
-│   └── ai_mentor.py            # Diagnostic briefing & contextual mentoring
+│   ├── ai_mentor.py            # Diagnostic briefing & contextual mentoring
+│   ├── assessment_engine.py    # (NEW) Skill testing & dynamic proficiency upgrade loop
+│   ├── jd_matcher.py           # (NEW) TF-IDF & Cosine similarity custom JD matcher
+│   └── career_analytics.py     # (NEW) Cross-role pathways & high-ROI skill radar
 └── tests/
     ├── __init__.py
-    └── test_pipeline.py        # Automated unit test suite
+    └── test_pipeline.py        # Automated test suite (7 unit tests passing)
 ```
 
 ---
 
 ## 🚀 How to Run the Application
 
-### 1. Open Terminal or PowerShell
-Navigate to the project directory:
-```powershell
-cd C:\Users\YASH\.gemini\antigravity\scratch\ai_upskilling_platform
-```
-
-### 2. Run the Unit Tests (Optional Verification)
-```powershell
-python tests/test_pipeline.py
-```
-*(All 5 test suites will run and report `OK`)*
-
-### 3. Launch the Web Interface
-Double-click `run_app.bat` or run:
-```powershell
-python -m streamlit run app.py
-```
-The application will automatically launch in your browser at `http://localhost:8501`.
-
----
-
-## 🎯 Review 2 Demonstration Walkthrough
-
-When presenting to your project review panel:
-1. **Choose a Pre-loaded Candidate Profile:**
-   - In the sidebar, select **"⚡ Choose Sample Resume"** -> **"Alex Chen — Aspiring ML Engineer"**.
-   - Show how the parser instantly extracts Alex's contact details, UC Berkeley degree, and identifies skills: Python, PyTorch, Scikit-Learn, Pandas, OpenCV, Git, etc.
-2. **Select Target Role:**
-   - Select **"Machine Learning Engineer"**.
-3. **Show Extracted Profile (Tab 1):**
-   - Demonstrate the domain categorization (Programming, ML & AI, Data Analysis, Software Engineering Tools).
-   - Point out the estimated proficiency badges (*Advanced*, *Intermediate*, *Beginner*).
-4. **Show Role Benchmark (Tab 2):**
-   - Explain how each role has defined competencies with importance weights (`Critical = 3.0`, `High = 2.0`, `Medium = 1.0`).
-5. **Show Skill Gap & Readiness Analytics (Tab 3):**
-   - Point out the **Readiness Score** (e.g., 68.3% - Nearly Ready).
-   - Show the **Radar Chart** comparing Candidate's current profile vs Role Benchmark.
-   - Show the **Proficiency Gap Severity Chart** highlighting missing production competencies: **Docker**, **MLOps**, and **FastAPI**.
-6. **Show Personalized Upskilling Roadmap (Tab 4):**
-   - Point out how the system organizes learning into 3 sequential phases:
-     - *Phase 1:* Bridge Critical Gaps (Docker, MLOps)
-     - *Phase 2:* Core Frameworks (FastAPI API deployment)
-     - *Phase 3:* Production tooling & portfolio projects
-   - Show specific courses, project briefs, and practice assessment drills.
-7. **Demonstrate AI Career Mentor (Tab 5):**
-   - Click one of the quick questions (e.g. *"Why is Docker important for an ML Engineer?"*).
-   - Show how the AI explains the exact business and technical justification for why an ML engineer must know containerization in production.
-8. **Export Diagnostic Report (Tab 6):**
-   - Download the generated evaluation markdown report as proof of deliverable.
-
----
-
-## 💡 Viva / Q&A Preparation for Review 2
-
-1. **Q: How does the system handle different resume formats?**
-   - *A:* We built a multi-format ingestion module using `pypdf` for vector/standard PDFs, `python-docx` for MS Word documents, and UTF-8 decoders for plain text. It performs regex-based entity extraction and heuristic section segmentation.
-2. **Q: How do you normalize different terms for the same skill?**
-   - *A:* We built a hierarchical skill taxonomy (`data/skills_taxonomy.json`) storing canonical terms and aliases (e.g., `"py"`, `"python3"`, `"python programming"` all map to canonical `"Python"`). Multi-word terms are matched first to prevent partial substring collision.
-3. **Q: How is the Role Readiness Score computed?**
-   - *A:* It uses a weighted competency formulation:
-     $$\text{Readiness Score} = \frac{\sum_{i=1}^N w_i \times \min\left(1.0, \frac{\text{Proficiency}_{\text{candidate}}}{\text{Proficiency}_{\text{expected}}}\right)}{\sum_{i=1}^N w_i} \times 100$$
-     where critical competencies carry higher weights ($w = 3.0$) than general tools ($w = 1.0$).
-4. **Q: What is planned for the next review (Review 3 / Phase 5-7)?**
-   - *A:* Implementing interactive coding & MCQ assessments to dynamically test skills, fine-tuning LLM/RAG integration for personalized tutoring, and integrating database persistence.
+1. Open PowerShell or Terminal:
+   ```powershell
+   cd C:\Users\YASH\OneDrive\Desktop\ai_upskilling_platform
+   ```
+2. Run Automated Verification Tests:
+   ```powershell
+   python tests/test_pipeline.py
+   ```
+   *(All 7 unit tests will report `OK`)*
+3. Launch the Web App:
+   Double-click `run_app.bat` or execute:
+   ```powershell
+   python -m streamlit run app.py
+   ```
+   Access in browser at: **`http://localhost:8501`**
